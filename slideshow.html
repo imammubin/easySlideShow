@@ -1,0 +1,13 @@
+            <div id="slideShow" style="overflow:hidden; width:710px; height:330px;"> 
+                <img src="slideshow1.jpg" /> <img src="slideshow2.jpg" style="display:none;"/> <img src="slideshow3.jpg" style="display:none;" />
+            </div>
+            <script type="text/javascript">
+   			var i=0;
+			     var length = $("#slideShow img").length;
+ 			     var refreshSlide = setInterval(function(){
+				 	if(i==length){i=0;}
+						$("#slideShow img").hide();
+						$("#slideShow img:eq("+i+")").show();
+ 				   i++
+        	     }, 5000);
+   			</script>
